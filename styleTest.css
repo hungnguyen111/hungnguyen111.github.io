@@ -1,0 +1,21 @@
+.footer__right{
+    width: 80%;
+    position: relative;
+    text-align: center;
+}
+.footer__right img:nth-child(1){
+    max-width: 100%;
+    height: auto;
+}
+.footer__right .slideInPhone{
+    position: absolute;
+    padding: 10% 29.6% 5% 29.6%;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.footer__right .slideInPhone img{
+    display: block;
+    vertical-align: middle;
+    width: 100%;
+}

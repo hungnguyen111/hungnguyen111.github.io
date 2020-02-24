@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>123phim</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- owncarousel -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">;
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">;
+
+    <!-- swiper carousel  -->
+    <link rel="stylesheet" href="./css/swiper.min.css">
+
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- wow.js  -->
+    <link rel="stylesheet" href="./css/animate.css">;
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light navHeader">
+            <img class="logo" src="../../Assets/img/icons/web-logo.png" alt="logo">
+            <a href="#" class="navButton" data-toggle="collapse" data-target="#idnavMobile"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><img
+                    src="./img/icons/menu-options.png" alt="menu"></a>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="row mr-auto">
+                    <li><a href="#selectFilm">Lịch Chiếu</a></li>
+                    <li><a href="#homeCinemaComplex">Cụm rạp</a></li>
+                    <li><a href="#homeNews">Tin Tức</a></li>
+                    <li><a href="#homeApp">Ứng dụng</a></li>
+                </ul>
+                <div class="row navRight">
+                    <a href="#" class="avatar"><img src="./img/avatar.png" alt="avatar"> Đăng Nhập</a>
+                    <div class="selectLocation dropdown row">
+                        <i class="fa fa-map-marker-alt"></i>
+                        <div class="dropdown-toggle white locationCity" data-toggle="dropdown" aria-expanded="false">Hồ
+                            Chí Minh</div>
+                        <ul class="dropdown-menu selectScroll">
+                            <!-- ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hồ Chí Minh" class="ng-binding">Hồ Chí
+                                    Minh</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hà Nội" class="ng-binding">Hà Nội</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Đà Nẵng" class="ng-binding">Đà Nẵng</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hải Phòng" class="ng-binding">Hải
+                                    Phòng</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Biên Hoà" class="ng-binding">Biên
+                                    Hoà</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Nha Trang" class="ng-binding">Nha
+                                    Trang</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Bình Dương" class="ng-binding">Bình
+                                    Dương</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Phan Thiết" class="ng-binding">Phan
+                                    Thiết</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hạ Long" class="ng-binding">Hạ Long</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Cần Thơ" class="ng-binding">Cần Thơ</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Vũng Tàu" class="ng-binding">Vũng
+                                    Tàu</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Quy Nhơn" class="ng-binding">Quy
+                                    Nhơn</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Huế" class="ng-binding">Huế</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Long Xuyên" class="ng-binding">Long
+                                    Xuyên</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Thái Nguyên" class="ng-binding">Thái
+                                    Nguyên</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Buôn Ma Thuột" class="ng-binding">Buôn
+                                    Ma
+                                    Thuột</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Bắc Giang" class="ng-binding">Bắc
+                                    Giang</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Bến Tre" class="ng-binding">Bến Tre</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Việt Trì" class="ng-binding">Việt
+                                    Trì</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Ninh Bình" class="ng-binding">Ninh
+                                    Bình</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Thái Bình" class="ng-binding">Thái
+                                    Bình</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Vinh" class="ng-binding">Vinh</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Bảo Lộc" class="ng-binding">Bảo Lộc</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Đà Lạt" class="ng-binding">Đà Lạt</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Trà Vinh" class="ng-binding">Trà
+                                    Vinh</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Yên Bái" class="ng-binding">Yên Bái</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Kiên Giang" class="ng-binding">Kiên
+                                    Giang</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Vĩnh Long" class="ng-binding">Vĩnh
+                                    Long</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Cà Mau" class="ng-binding">Cà Mau</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hậu Giang" class="ng-binding">Hậu
+                                    Giang</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Tây Ninh" class="ng-binding">Tây
+                                    Ninh</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Tuyên Quang" class="ng-binding">Tuyên
+                                    Quang</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Thanh Hóa" class="ng-binding">Thanh
+                                    Hóa</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Nam Định" class="ng-binding">Nam
+                                    Định</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hải Dương" class="ng-binding">Hải
+                                    Dương</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Gia Lai" class="ng-binding">Gia Lai</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hà Tĩnh" class="ng-binding">Hà Tĩnh</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Phú Yên" class="ng-binding">Phú Yên</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Bạc Liêu" class="ng-binding">Bạc
+                                    Liêu</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Long An" class="ng-binding">Long An</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Đồng Hới" class="ng-binding">Đồng
+                                    Hới</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hà Nam" class="ng-binding">Hà Nam</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Bắc Ninh" class="ng-binding">Bắc
+                                    Ninh</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Quảng Trị" class="ng-binding">Quảng
+                                    Trị</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Kon Tum" class="ng-binding">Kon Tum</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Sóc Trăng" class="ng-binding">Sóc
+                                    Trăng</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Sơn La" class="ng-binding">Sơn La</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Lạng Sơn" class="ng-binding">Lạng
+                                    Sơn</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Quảng Ngãi" class="ng-binding">Quảng
+                                    Ngãi</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Mỹ Tho" class="ng-binding">Mỹ Tho</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Đồng Tháp" class="ng-binding">Đồng
+                                    Tháp</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+    <div class="collapse navbar-collapse" id="idnavMobile">
+        <div class="menuMobile">
+            <ul class="listMenu">
+                <li><a href="#" class="avatar"><img src="./img/avatar.png" alt="avatar"> Đăng Nhập</a></li>
+                <li><a href="#">Lịch Chiếu</a></li>
+                <li class="angleRight"><a href="#" data-toggle="collapse" data-target="#idnavMobile"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="fa fa-angle-right"></i></a></li>
+                <li><a href="#">Cụm rạp</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Ứng dụng</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <section class="carousel">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="./img/ke-du-hanh-15761286853539.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/ccee-15768157060937.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/jumanjii-3-15762073170542.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/last-christ-15762073893342.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/mat-biec-15768091323740.jpg" alt="">
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <section class="selectMenu">
+        <div class="selectCinema">
+            <select class="form-control selectMenuChild" id="">
+                <option>Phim</option>
+                <option>Chị Chị Em Em - Midnight Confessions (C18)</option>
+                <option>Mắt Biếc - Dreamy Eyes (C16)</option>
+                <option>Chay - My Tyrano: Together, Forever</option>
+                <option>Giáng Sinh Đen - Black Christmas (C18)</option>
+                <option>Chay - My Tyrano: Together, Forever</option>
+                <option>Cua Lại Vợ Bầu - Win My Baby Back (C16)</option>
+            </select>
+        </div>
+        <div class="selectCinema">
+            <select class="form-control selectMenuChild" id="">
+                <option>Rạp</option>
+                <option>Chị Chị Em Em - Midnight Confessions (C18)</option>
+                <option>Mắt Biếc - Dreamy Eyes (C16)</option>
+                <option>Chay - My Tyrano: Together, Forever</option>
+                <option>Giáng Sinh Đen - Black Christmas (C18)</option>
+                <option>Chay - My Tyrano: Together, Forever</option>
+                <option>Cua Lại Vợ Bầu - Win My Baby Back (C16)</option>
+            </select>
+        </div>
+        <div class="selectCinema">
+            <select class="form-control selectMenuChild" id="">
+                <option>Ngày Xem</option>
+                <option>Chị Chị Em Em - Midnight Confessions (C18)</option>
+                <option>Mắt Biếc - Dreamy Eyes (C16)</option>
+                <option>Chay - My Tyrano: Together, Forever</option>
+                <option>Giáng Sinh Đen - Black Christmas (C18)</option>
+                <option>Chay - My Tyrano: Together, Forever</option>
+                <option>Cua Lại Vợ Bầu - Win My Baby Back (C16)</option>
+            </select>
+        </div>
+        <div class="selectCinema">
+            <select class="form-control selectMenuChild" id="">
+                <option>Xuất chiếu</option>
+                <option>Chị Chị Em Em - Midnight Confessions (C18)</option>
+                <option>Mắt Biếc - Dreamy Eyes (C16)</option>
+                <option>Chay - My Tyrano: Together, Forever</option>
+                <option>Giáng Sinh Đen - Black Christmas (C18)</option>
+                <option>Chay - My Tyrano: Together, Forever</option>
+                <option>Cua Lại Vợ Bầu - Win My Baby Back (C16)</option>
+            </select>
+        </div>
+        <div class="buttonSelect">
+            <button type="button" class="btn btn-secondary" id="btnBuy">MUA VÉ NGAY</button>
+        </div>
+    </section>
+    <section class="homeMovie my-5" id="selectFilm">
+        <div class="tabControl">
+            <ul class="nav navCenter">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home">Đang Chiếu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#menu1">Sắp Chiếu</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="home">
+                <div class="owl-carousel homeMovie__now">
+                    <div class="item row myHomeMovie">
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/mat-biec-15749107627211_215x318.jpg" class="card-img-top"
+                                    alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/chi-chi-em-em-sister-sister-c18-15747394235000_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/diep-vien-an-danh-spies-in-disguise-15747409440171_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/rambo-hoi-ket-dam-mau-rambo-last-blood-c18-15766387093248_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/mat-biec-15749107627211_215x318.jpg" class="card-img-top"
+                                    alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/chi-chi-em-em-sister-sister-c18-15747394235000_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/diep-vien-an-danh-spies-in-disguise-15747409440171_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/rambo-hoi-ket-dam-mau-rambo-last-blood-c18-15766387093248_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item row myHomeMovie">
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/mat-biec-15749107627211_215x318.jpg" class="card-img-top"
+                                    alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/chi-chi-em-em-sister-sister-c18-15747394235000_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/diep-vien-an-danh-spies-in-disguise-15747409440171_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/rambo-hoi-ket-dam-mau-rambo-last-blood-c18-15766387093248_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/mat-biec-15749107627211_215x318.jpg" class="card-img-top"
+                                    alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/chi-chi-em-em-sister-sister-c18-15747394235000_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/diep-vien-an-danh-spies-in-disguise-15747409440171_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/rambo-hoi-ket-dam-mau-rambo-last-blood-c18-15766387093248_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane" id="menu1">
+                <div class="homeMovie__comming owl-carousel" id="upComingFilms">
+                    <div class="carouselItem item row myHomeMovie">
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/mat-biec-15749107627211_215x318.jpg" class="card-img-top"
+                                    alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/chi-chi-em-em-sister-sister-c18-15747394235000_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/diep-vien-an-danh-spies-in-disguise-15747409440171_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/rambo-hoi-ket-dam-mau-rambo-last-blood-c18-15766387093248_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/mat-biec-15749107627211_215x318.jpg" class="card-img-top"
+                                    alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/chi-chi-em-em-sister-sister-c18-15747394235000_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/diep-vien-an-danh-spies-in-disguise-15747409440171_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/rambo-hoi-ket-dam-mau-rambo-last-blood-c18-15766387093248_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carouselItem item row myHomeMovie">
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/mat-biec-15749107627211_215x318.jpg" class="card-img-top"
+                                    alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/chi-chi-em-em-sister-sister-c18-15747394235000_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/diep-vien-an-danh-spies-in-disguise-15747409440171_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/rambo-hoi-ket-dam-mau-rambo-last-blood-c18-15766387093248_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/mat-biec-15749107627211_215x318.jpg" class="card-img-top"
+                                    alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/chi-chi-em-em-sister-sister-c18-15747394235000_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/diep-vien-an-danh-spies-in-disguise-15747409440171_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="filmDetail">
+                                <img src="./img/film/rambo-hoi-ket-dam-mau-rambo-last-blood-c18-15766387093248_215x318.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="showHoverImg">
+                                    <button>
+                                        <img src="./img/icons/play-video.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="showHover">
+                                <a href="">MUA VÉ</a>
+                            </div>
+
+                            <span class="ageType">C16</span>
+                            <span class="avgPoint">
+                                <p>8.5</p>
+                                <p>
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.png" alt="">
+                                    <img src="./img/icons/star1.2.png" alt="">
+                                </p>
+                            </span>
+                            <div class="card-body">
+                                <h5 class="card-title">Mắt Biếc - Dreamy Eyes (C16)</h5>
+                                <p class="card-text">117 phút</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="homeCinemaComplex mb-5" id="homeCinemaComplex">
+        <div class="homeCinemaTop">
+            <img src="./img/icons/back-news.png" alt="back-new">
+        </div>
+        <div class="homeCinema">
+            <nav>
+                <div class="nav nav-tabs homeCinemaTop" role="tablist">
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#cgvCinema" role="tab"
+                        aria-controls="v-pills-profile" aria-selected="false"><img src="./img/icons/cgv.png" alt=""></a>
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#bhdMovie" role="tab"
+                        aria-controls="v-pills-home" aria-selected="true"><img src="./img/icons/bhd.png" alt=""></a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#dcineCinema" role="tab"
+                        aria-controls="v-pills-messages" aria-selected="false"><img src="./img/icons/dcine.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#galacyCinema" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/galaxycine.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#cinestarCinema" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/cinestar.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#dongdaCinema" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/dongdacinema.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#megagsCinema" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/megags.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#lotteCinema" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/lotte.png"
+                            alt=""></a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="cgvCinema" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="homeCinemaPosition row">
+                        <div class="cinema__position__control">
+                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <div class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+                                    href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                                    <div class="row cinemaLeft">
+                                        <div class="cinemaLeftLeft">
+                                            <img src="./img/icons/bhd-star-bitexco-15379552241200.jpg" alt="">
+                                        </div>
+                                        <div class="cinemaLeftRight">
+                                            <span><span style="color: #8bc541;">BHD Star</span> - Bitexco</span><br>
+                                            <p class="address">L3-Bitexco Icon 68, 2 Hải Triều, Q.1</p>
+                                            <a href="#">[Chi tiết]</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
+                                    href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                                    aria-selected="false">
+                                    <div class="row cinemaLeft">
+                                        <div class="cinemaLeftLeft">
+                                            <img src="./img/icons/bhd-star-bitexco-15379552241200.jpg" alt="">
+                                        </div>
+                                        <div class="cinemaLeftRight">
+                                            <span><span style="color: #8bc541;">BHD Star</span> - Bitexco</span><br>
+                                            <p class="address">L3-Bitexco Icon 68, 2 Hải Triều, Q.1</p>
+                                            <a href="#">[Chi tiết]</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
+                                    href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
+                                    aria-selected="false">
+                                    <div class="row cinemaLeft">
+                                        <div class="cinemaLeftLeft">
+                                            <img src="./img/icons/bhd-star-bitexco-15379552241200.jpg" alt="">
+                                        </div>
+                                        <div class="cinemaLeftRight">
+                                            <span><span style="color: #8bc541;">BHD Star</span> - Bitexco</span><br>
+                                            <p class="address">L3-Bitexco Icon 68, 2 Hải Triều, Q.1</p>
+                                            <a href="#">[Chi tiết]</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
+                                    href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+                                    aria-selected="false">
+                                    <div class="row cinemaLeft">
+                                        <div class="cinemaLeftLeft">
+                                            <img src="./img/icons/bhd-star-bitexco-15379552241200.jpg" alt="">
+                                        </div>
+                                        <div class="cinemaLeftRight">
+                                            <span><span style="color: #8bc541;">BHD Star</span> - Bitexco</span><br>
+                                            <p class="address">L3-Bitexco Icon 68, 2 Hải Triều, Q.1</p>
+                                            <a href="#">[Chi tiết]</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cinema__position__content">
+                            <div class="tab-content" id="v-pills-tabContent">
+                                <div class="tab-pane fade show active row" id="v-pills-home" role="tabpanel"
+                                    aria-labelledby="v-pills-home-tab">
+                                    <div class="cinemaRight show collapse row" aria-expanded="true" data-toggle="collapse"
+                                        data-target="#demo">
+                                        <div class="cinemaRightLeft">
+                                            <img src="./img/filmIcon/diep-vien-an-danh-spies-in-disguise-15747409440171_60x60.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="cinemaRightRight">
+                                            <span><span class="ageSpan">P</span> Điệp Viên Ẩn Danh - Spies In
+                                                Disguise</span><br>
+                                            <span>101 phút - TIX 9.1 - IMDb 6</span><br>
+                                        </div>
+                                    </div>
+                                    <div id="demo" class="collapse show">
+                                        <div class="typeFilm">2D Digital</div>
+                                        <div class="time">
+                                            <a href="#"><span>19:15</span> ~ 20:56</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                                    aria-labelledby="v-pills-profile-tab">b</div>
+                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                    aria-labelledby="v-pills-messages-tab">c</div>
+                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                                    aria-labelledby="v-pills-settings-tab">d</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="bhdMovie" role="tabpanel" aria-labelledby="nav-profile-tab">2...</div>
+                <div class="tab-pane fade" id="dcineCinema" role="tabpanel" aria-labelledby="nav-contact-tab">.3..</div>
+                <div class="tab-pane fade" id="galacyCinema" role="tabpanel" aria-labelledby="nav-profile-tab">.4..
+                </div>
+                <div class="tab-pane fade" id="cinestarCinema" role="tabpanel" aria-labelledby="nav-contact-tab">5...
+                </div>
+                <div class="tab-pane fade" id="dongdaCinema" role="tabpanel" aria-labelledby="nav-profile-tab">..6.
+                </div>
+                <div class="tab-pane fade" id="megagsCinema" role="tabpanel" aria-labelledby="nav-contact-tab">.7..
+                </div>
+                <div class="tab-pane fade" id="lotteCinema" role="tabpanel" aria-labelledby="nav-contact-tab">...8</div>
+            </div>
+            <div class="homeCinemaPosition">
+
+            </div>
+            <div class="homeCinemaFilm"></div>
+        </div>
+        <!-- <div class="homeCinemaContent">
+            <div class="row cinemaBorder">
+                <div class="nav flex-column nav-pills cinemaContent">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                        aria-controls="v-pills-home" aria-selected="true"><img src="./img/icons/bhd.png" alt=""></a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                        aria-controls="v-pills-profile" aria-selected="false"><img src="./img/icons/cgv.png" alt=""></a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                        aria-controls="v-pills-messages" aria-selected="false"><img src="./img/icons/dcine.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/galaxycine.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/cinestar.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/dongdacinema.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/megags.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/lotte.png"
+                            alt=""></a>
+                </div>
+                <div class="tab-content cinemaContent2" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active cinemaContentChild" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab">
+                        <div class="row">
+                            <div class="col-5 ">
+                                <div class="nav flex-column nav-pills cinema" role="tablist"
+                                    aria-orientation="vertical">
+                                    <div class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+                                        data-target="#v-pills-home2" role="tab" aria-controls="v-pills-home2"
+                                        aria-selected="true">
+                                        <div class="row cinemaMid">
+                                            <div class="cinemaMidLeft">
+                                                <img src="./img/icons/bhd-star-bitexco-15379552241200.jpg" alt="">
+                                            </div>
+                                            <div class="cinemaMidRight">
+                                                <span><span style="color: #8bc541;">BHD Star</span> - Bitexco</span><br>
+                                                <span>L3-Bitexco Icon 68, 2 Hải Triều, Q...<span
+                                                        class="addressDisplay">.1</span></span><br>
+                                                <a href="#">[Chi tiết]</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
+                                        href="#v-pills-profile2" role="tab" aria-controls="v-pills-profile2"
+                                        aria-selected="false">
+                                        <div class="row cinemaMid">
+                                            <div class="cinemaMidLeft">
+                                                <img src="./img/icons/bhd-star-vincom-thao-dien-15379553942188.jpg"
+                                                    alt="">
+                                            </div>
+                                            <div class="cinemaMidRight">
+                                                <span><span style="color: #8bc541;">BHD Star</span> - Vincom Thảo
+                                                    Điền</span><br>
+                                                <span>L5-Megamall, 159 XL Hà Nội, Q...<span
+                                                        class="addressDisplay">.2</span></span><br>
+                                                <a href="#">[Chi tiết]</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
+                                        href="#v-pills-messages2" role="tab" aria-controls="v-pills-messages2"
+                                        aria-selected="false">
+                                        <div class="row cinemaMid">
+                                            <div class="cinemaMidLeft">
+                                                <img src="./img/icons/bhd-star-vincom-3-2-15379527367766.jpg" alt="">
+                                            </div>
+                                            <div class="cinemaMidRight">
+                                                <span><span style="color: #8bc541;">BHD Star</span> - Vincom
+                                                    3/2</span><br>
+                                                <span>L5-Vincom 3/2, 3C Đường 3/2...<span class="addressDisplay">,
+                                                        Q.10</span></span><br>
+                                                <a href="#">[Chi tiết]</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
+                                        href="#v-pills-settings2" role="tab" aria-controls="v-pills-settings2"
+                                        aria-selected="false">
+                                        <div class="row cinemaMid">
+                                            <div class="cinemaMidLeft">
+                                                <img src="./img/icons/bhd-star-vincom-3-2-15379527367766.jpg" alt="">
+                                            </div>
+                                            <div class="cinemaMidRight">
+                                                <span><span style="color: #8bc541;">BHD Star</span> - Phạm
+                                                    Hùng</span><br>
+                                                <span>L4-Satra Phạm Hùng, C6/27 Phạm Hùng...<span
+                                                        class="addressDisplay">, Bình Chánh</span></span><br>
+                                                <a href="#">[Chi tiết]</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="v-pills-home2" role="tabpanel"
+                                        aria-labelledby="v-pills-home-tab">
+                                        <div class="row cinemaRight show collapse" data-toggle="collapse"
+                                            data-target="#demo1">
+                                            <div class="cinemaRightLeft">
+                                                <img src="./img/filmIcon/diep-vien-an-danh-spies-in-disguise-15747409440171_60x60.jpg"
+                                                    alt="">
+                                            </div>
+                                            <div class="cinemaRightRight">
+                                                <span><span class="ageSpan">P</span> Điệp Viên Ẩn Danh - Spies In
+                                                    Disguise</span><br>
+                                                <span>101 phút - TIX 9.1 - IMDb 6</span><br>
+                                            </div>
+
+                                        </div>
+                                        <div id="demo1" class="collapse show showTime">
+                                            <div class="typeFilm">2D Digital</div>
+                                            <div class="time">
+                                                <a href="#"><span>19:15</span> ~ 20:56</a>
+                                            </div>
+                                        </div>
+                                        <div class="row cinemaRight show collapse" data-toggle="collapse"
+                                            data-target="#demo3">
+                                            <div class="cinemaRightLeft">
+                                                <img src="./img/filmIcon/chi-chi-em-em-sister-sister-c18-15747394235000_60x60.jpg"
+                                                    alt="">
+                                            </div>
+                                            <div class="cinemaRightRight">
+                                                <span><span class="ageSpan">P</span> Điệp Viên Ẩn Danh - Spies In
+                                                    Disguise</span><br>
+                                                <span>101 phút - TIX 9.1 - IMDb 6</span><br>
+                                            </div>
+
+                                        </div>
+                                        <div id="demo3" class="collapse show showTime">
+                                            <div class="typeFilm">2D Digital</div>
+                                            <div class="time">
+                                                <a href="#"><span>19:15</span> ~ 20:56</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-profile2" role="tabpanel"
+                                        aria-labelledby="v-pills-profile-tab">
+                                        <div class="row cinemaRight show collapse" data-toggle="collapse"
+                                            data-target="#demo2">
+                                            <div class="cinemaRightLeft">
+                                                <img src="./img/filmIcon/chi-chi-em-em-sister-sister-c18-15747394235000_60x60.jpg"
+                                                    alt="">
+                                            </div>
+                                            <div class="cinemaRightRight">
+                                                <span><span class="ageSpan">P</span> Điệp Viên Ẩn Danh - Spies In
+                                                    Disguise</span><br>
+                                                <span>101 phút - TIX 9.1 - IMDb 6</span><br>
+                                            </div>
+
+                                        </div>
+                                        <div id="demo2" class="collapse show showTime">
+                                            <div class="typeFilm">2D Digital</div>
+                                            <div class="time">
+                                                <a href="#"><span>19:15</span> ~ 20:56</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="v-pills-messages2" role="tabpanel"
+                                        aria-labelledby="v-pills-messages-tab">werwerd</div>
+                                    <div class="tab-pane fade" id="v-pills-settings2" role="tabpanel"
+                                        aria-labelledby="v-pills-settings-tab">adsfasdf</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+                                        href="#v-pills-home3" role="tab" aria-controls="v-pills-home3"
+                                        aria-selected="true">Home</a>
+                                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
+                                        href="#v-pills-profile3" role="tab" aria-controls="v-pills-profile3"
+                                        aria-selected="false">Profile</a>
+                                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
+                                        href="#v-pills-messages3" role="tab" aria-controls="v-pills-messages3"
+                                        aria-selected="false">Messages</a>
+                                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
+                                        href="#v-pills-settings3" role="tab" aria-controls="v-pills-settings3"
+                                        aria-selected="false">Settings</a>
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="v-pills-home3" role="tabpanel"
+                                        aria-labelledby="v-pills-home-tab">123</div>
+                                    <div class="tab-pane fade" id="v-pills-profile3" role="tabpanel"
+                                        aria-labelledby="v-pills-profile-tab">35435</div>
+                                    <div class="tab-pane fade" id="v-pills-messages3" role="tabpanel"
+                                        aria-labelledby="v-pills-messages-tab">346346</div>
+                                    <div class="tab-pane fade" id="v-pills-settings3" role="tabpanel"
+                                        aria-labelledby="v-pills-settings-tab">r565</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab">...</div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                        aria-labelledby="v-pills-settings-tab">...</div>
+                </div>
+            </div>
+            <!-- <div class="cinemaContent">
+                <div class="nav flex-column cinemaLeft" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                        aria-controls="v-pills-home" aria-selected="true"><img src="./img/icons/cgv.png" alt=""></a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                        aria-controls="v-pills-profile" aria-selected="false"><img src="./img/icons/bhd.png" alt=""></a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                        aria-controls="v-pills-messages" aria-selected="false"><img src="./img/icons/dcine.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/galaxycine.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/cinestar.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/dongdacinema.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/megags.png"
+                            alt=""></a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                        aria-controls="v-pills-settings" aria-selected="false"><img src="./img/icons/lotte.png"
+                            alt=""></a>
+                </div>
+            </div> -->
+        <!-- <div class="cinemaContent2">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="nav flex-column nav-pills" id="v-pills-tab2" role="tablist"
+                                    aria-orientation="vertical">
+                                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+                                        href="#v-pills-home-detail" role="tab" aria-controls="v-pills-home"
+                                        aria-selected="true">Home</a>
+                                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
+                                        href="#v-pills-profile-detail" role="tab" aria-controls="v-pills-profile"
+                                        aria-selected="false">Profile</a>
+                                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
+                                        href="#v-pills-messages-detail" role="tab" aria-controls="v-pills-messages"
+                                        aria-selected="false">Messages</a>
+                                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill"
+                                        href="#v-pills-settings-detail" role="tab" aria-controls="v-pills-settings"
+                                        aria-selected="false">Settings</a>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    <div class="tab-pane fade show active" id="v-pills-home-detail" role="tabpanel"
+                                        aria-labelledby="v-pills-home-tab">abc</div>
+                                    <div class="tab-pane fade" id="v-pills-profile-detail" role="tabpanel"
+                                        aria-labelledby="v-pills-profile-tab">abbb</div>
+                                    <div class="tab-pane fade" id="v-pills-messages-detail" role="tabpanel"
+                                        aria-labelledby="v-pills-messages-tab">dsfsd...</div>
+                                    <div class="tab-pane fade" id="v-pills-settings-detail" role="tabpanel"
+                                        aria-labelledby="v-pills-settings-tab">ad993</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab">...</div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab">...</div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                        aria-labelledby="v-pills-settings-tab">...</div>
+                </div>
+            </div> -->
+        <!-- </div>
+        </div> -->
+    </section>
+    <section class="homeNews" id="homeNews">
+        <div class="homeNewsTop">
+            <img src="./img/icons/back-news.png" alt="back-new">
+        </div>
+        <div class="tabControl">
+            <ul class="nav navCenter">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#dienAnh">Điện Ảnh 24h</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#review">Review</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#khuyenMai">Khuyến Mãi</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="dienAnh">
+                <div class="row newsTop">
+                    <div class="col-12 col-sm-6 newsTopImg">
+                        <img src="./img/icons/thong-bao-doi-ten-thuong-hieu-123phim-15771601850188.jpg" alt="">
+                        <p class="newTitle">[Thông báo] Đổi tên thương hiệu 123Phim</p>
+                        <p>123Phim thông báo đổi tên thương hiệu.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 newsTopImg">
+                        <img src="./img/icons/cum-rap-cgv-chinh-thuc-co-mat-tren-123phim-15761453956040.jpg" alt="">
+                        <p class="newTitle">Cụm rạp CGV chính thức có mặt trên 123Phim</p>
+                        <p>Chào đón cụm rạp CGV trên hệ thống đặt vé trực tuyến 123Phim.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="newsBot newsTop row">
+                    <div class="newsBotLeft newsBotItem newsTopImg">
+                        <img src="./img/icons/tong-hop-tat-ca-nhan-vat-trong-thuong-hieu-dinh-dam-star-wars-p1-15776842659094.jpg"
+                            alt="">
+                        <p class="newTitle">Tổng hợp nhân vật trong thương hiệu đình đám Star Wars (P1)</p>
+                        <p>Danh sách này sẽ giúp các bạn 'phổ cập' kiến thức Star Wars một cách nhanh nhất.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="newsBotMid newsBotItem newsTopImg">
+                        <img src="./img/icons/09adbe8e1eff4efa227c6e41bfd5b893.jpg" alt="">
+                        <p class="newTitle">Bạn đã sẵn sàng nắm tất tần tật kiến thức trong One Piece: Stampede?</p>
+                        <p>TIX sẽ giúp bạn trở thành "fan cứng" One Piece chỉ trong tíc tắc nhé.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="newsBotRight newsBotItem newsTopImg">
+                        <div class="botRightItems">
+                            <img src="./img/icons/muon-hinh-van-trang-kieu-doc-than-trong-chong-cu-tinh-moi-15773512253745.jpg"
+                                alt="">
+                            <p>Muôn hình vạn trạng kiểu độc thân trong Chồng Cũ, Tình Mới</p>
+                        </div>
+                        <div class="botRightItems">
+                            <img src="./img/icons/rambo-hoi-ket-dam-mau-hoi-ket-xung-tam-thuong-hieu-hanh-dong-duoc-yeu-thich-hang-dau-hollywood-15772691049778.jpg"
+                                alt="">
+                            <p>Rambo: Hồi Kết Đẫm Máu - Hồi kết xứng tầm thương hiệu hành động được yêu thích hàng đầu
+                                Hollywood</p>
+                        </div>
+                        <div class="botRightItems">
+                            <img src="./img/icons/thong-bao-chao-don-rap-bhd-star-the-garden-ha-noi-tren-tix-15772726310715.jpg"
+                                alt="">
+                            <p>[Thông báo] Chào đón rạp BHD Star The Garden - Hà Nội trên TIX</p>
+                        </div>
+                        <div class="botRightItems">
+                            <img src="./img/icons/73eb26f02cf1f09fdca7f0ad2ff4d7b6.jpg" alt="">
+                            <p>Những vở nhạc kịch nổi tiếng chuyển thể thành công sang phiên bản điện ảnh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="review">
+                <div class="row newsTop">
+                    <div class="col-12 col-sm-6 newsTopImg">
+                        <img src="./img/icons/thong-bao-doi-ten-thuong-hieu-123phim-15771601850188.jpg" alt="">
+                        <p class="newTitle">[Thông báo] Đổi tên thương hiệu 123Phim</p>
+                        <p>123Phim thông báo đổi tên thương hiệu.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 newsTopImg">
+                        <img src="./img/icons/cum-rap-cgv-chinh-thuc-co-mat-tren-123phim-15761453956040.jpg" alt="">
+                        <p class="newTitle">Cụm rạp CGV chính thức có mặt trên 123Phim</p>
+                        <p>Chào đón cụm rạp CGV trên hệ thống đặt vé trực tuyến 123Phim.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="newsBot newsTop row">
+                    <div class="newsBotLeft newsBotItem newsTopImg">
+                        <img src="./img/icons/tong-hop-tat-ca-nhan-vat-trong-thuong-hieu-dinh-dam-star-wars-p1-15776842659094.jpg"
+                            alt="">
+                        <p class="newTitle">Tổng hợp nhân vật trong thương hiệu đình đám Star Wars (P1)</p>
+                        <p>Danh sách này sẽ giúp các bạn 'phổ cập' kiến thức Star Wars một cách nhanh nhất.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="newsBotMid newsBotItem newsTopImg">
+                        <img src="./img/icons/09adbe8e1eff4efa227c6e41bfd5b893.jpg" alt="">
+                        <p class="newTitle">Bạn đã sẵn sàng nắm tất tần tật kiến thức trong One Piece: Stampede?</p>
+                        <p>TIX sẽ giúp bạn trở thành "fan cứng" One Piece chỉ trong tíc tắc nhé.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="newsBotRight newsBotItem newsTopImg">
+                        <div class="botRightItems">
+                            <img src="./img/icons/muon-hinh-van-trang-kieu-doc-than-trong-chong-cu-tinh-moi-15773512253745.jpg"
+                                alt="">
+                            <p>Muôn hình vạn trạng kiểu độc thân trong Chồng Cũ, Tình Mới</p>
+                        </div>
+                        <div class="botRightItems">
+                            <img src="./img/icons/rambo-hoi-ket-dam-mau-hoi-ket-xung-tam-thuong-hieu-hanh-dong-duoc-yeu-thich-hang-dau-hollywood-15772691049778.jpg"
+                                alt="">
+                            <p>Rambo: Hồi Kết Đẫm Máu - Hồi kết xứng tầm thương hiệu hành động được yêu thích hàng đầu
+                                Hollywood</p>
+                        </div>
+                        <div class="botRightItems">
+                            <img src="./img/icons/thong-bao-chao-don-rap-bhd-star-the-garden-ha-noi-tren-tix-15772726310715.jpg"
+                                alt="">
+                            <p>[Thông báo] Chào đón rạp BHD Star The Garden - Hà Nội trên TIX</p>
+                        </div>
+                        <div class="botRightItems">
+                            <img src="./img/icons/73eb26f02cf1f09fdca7f0ad2ff4d7b6.jpg" alt="">
+                            <p>Những vở nhạc kịch nổi tiếng chuyển thể thành công sang phiên bản điện ảnh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="khuyenMai">
+                <div class="row newsTop">
+                    <div class="col-12 col-sm-6 newsTopImg">
+                        <img src="./img/icons/thong-bao-doi-ten-thuong-hieu-123phim-15771601850188.jpg" alt="">
+                        <p class="newTitle">[Thông báo] Đổi tên thương hiệu 123Phim</p>
+                        <p>123Phim thông báo đổi tên thương hiệu.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 newsTopImg">
+                        <img src="./img/icons/cum-rap-cgv-chinh-thuc-co-mat-tren-123phim-15761453956040.jpg" alt="">
+                        <p class="newTitle">Cụm rạp CGV chính thức có mặt trên 123Phim</p>
+                        <p>Chào đón cụm rạp CGV trên hệ thống đặt vé trực tuyến 123Phim.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="newsBot newsTop row">
+                    <div class="newsBotLeft newsBotItem newsTopImg">
+                        <img src="./img/icons/tong-hop-tat-ca-nhan-vat-trong-thuong-hieu-dinh-dam-star-wars-p1-15776842659094.jpg"
+                            alt="">
+                        <p class="newTitle">Tổng hợp nhân vật trong thương hiệu đình đám Star Wars (P1)</p>
+                        <p>Danh sách này sẽ giúp các bạn 'phổ cập' kiến thức Star Wars một cách nhanh nhất.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="newsBotMid newsBotItem newsTopImg">
+                        <img src="./img/icons/09adbe8e1eff4efa227c6e41bfd5b893.jpg" alt="">
+                        <p class="newTitle">Bạn đã sẵn sàng nắm tất tần tật kiến thức trong One Piece: Stampede?</p>
+                        <p>TIX sẽ giúp bạn trở thành "fan cứng" One Piece chỉ trong tíc tắc nhé.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="newsBotRight newsBotItem newsTopImg">
+                        <div class="botRightItems">
+                            <img src="./img/icons/muon-hinh-van-trang-kieu-doc-than-trong-chong-cu-tinh-moi-15773512253745.jpg"
+                                alt="">
+                            <p>Muôn hình vạn trạng kiểu độc thân trong Chồng Cũ, Tình Mới</p>
+                        </div>
+                        <div class="botRightItems">
+                            <img src="./img/icons/rambo-hoi-ket-dam-mau-hoi-ket-xung-tam-thuong-hieu-hanh-dong-duoc-yeu-thich-hang-dau-hollywood-15772691049778.jpg"
+                                alt="">
+                            <p>Rambo: Hồi Kết Đẫm Máu - Hồi kết xứng tầm thương hiệu hành động được yêu thích hàng đầu
+                                Hollywood</p>
+                        </div>
+                        <div class="botRightItems">
+                            <img src="./img/icons/thong-bao-chao-don-rap-bhd-star-the-garden-ha-noi-tren-tix-15772726310715.jpg"
+                                alt="">
+                            <p>[Thông báo] Chào đón rạp BHD Star The Garden - Hà Nội trên TIX</p>
+                        </div>
+                        <div class="botRightItems">
+                            <img src="./img/icons/73eb26f02cf1f09fdca7f0ad2ff4d7b6.jpg" alt="">
+                            <p>Những vở nhạc kịch nổi tiếng chuyển thể thành công sang phiên bản điện ảnh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn">Xem Thêm</button>
+    </section>
+    <section class="homeApp" id="homeApp">
+        <div class="footer__top__bg">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="footer__left">
+                        <p>Ứng dụng tiện lợi dành cho người yêu điện ảnh</p>
+                        <p>Không chỉ đặt vé, bạn còn có thể bình luận phim, chấm điểm rạp và đổi quà hấp dẫn.</p>
+                        <button class="btn">App miễn phí - Tải về ngay!</button>
+                        <p>TIX có hai phiên bản <a href="#">IOS</a> & <a href="#">Android</a></p>
+                    </div>
+                    <div class="footer__right">
+
+                        <img class="footer__right__img" src="./img/icons/mobile.png" alt="Loading...">
+                        <div class="slideInPhone">
+                            <div class="swiper-container swiperSlide">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./img/icons/slide0.png" alt="0">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/icons/slide1.png" alt="1">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/icons/slide2.png" alt="2">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/icons/slide4.png" alt="3">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/icons/slide5.png" alt="5">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/icons/slide7.png" alt="7">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/icons/slide8.png" alt="8">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/icons/slide9.png" alt="9">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/icons/slide10.png" alt="10">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer__bot_bg">
+            <div class="footer__bot">
+                <div class="row ">
+                    <div class="bot__items bot__left">
+                        <p class="hideOnMobile">TIX</p>
+                        <div class="row">
+                            <div class="bot__left__top hideOnMobile">
+                                <a href="#">FAQ</a><br>
+                                <a href="#">Brand Guidelines</a>
+                            </div>
+                            <div class="bot__left__bot ">
+                                <a href="#">Thỏa thuận sử dụng</a>
+                                <a href="#">Quy chế hoạt động</a>
+                                <a href="#">Chính sách bảo mật</a>
+                                <a href="#">Quyền lợi thành viên</a>
+                                <a href="#">Brand Guidelines</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot__items bot__mid hideOnMobile">
+                        <p>ĐỐI TÁC</p>
+                        <div class="row col-12 linePartner">
+                            <a href="https://www.cgv.vn/"><img src="./img/icons/cgv.png" alt="cgv"></a>
+                            <a href="#"><img src="./img/icons/bhd.png" alt="bhd"></a>
+                            <a href="#"><img src="./img/icons/galaxycine.png" alt="galaxycine"></a>
+                            <a href="#"><img src="./img/icons/cinestar.png" alt="cinestar"></a>
+                            <a href="#"><img src="./img/icons/lotte.png" alt="lotte"></a>
+                        </div>
+                        <div class="row col-12 linePartner">
+                            <a href="https://www.cgv.vn/"><img src="./img/icons/megags.png" alt="megags"></a>
+                            <a href="#"><img src="./img/icons/bt.jpg" alt="bt"></a>
+                            <a href="#"><img src="./img/icons/dongdacinema.png" alt="dongdacinema"></a>
+                            <a href="#"><img src="./img/icons/TOUCH.png" alt="TOUCH"></a>
+                            <a href="#"><img src="./img/icons/cnx.jpg" alt="cnx"></a>
+                        </div>
+                        <div class="row col-12 linePartner">
+                            <a href="https://www.cgv.vn/"><img src="./img/icons/STARLIGHT.png" alt="STARLIGHT"></a>
+                            <a href="#"><img src="./img/icons/dcine.png" alt="dcine"></a>
+                            <a href="#"><img src="./img/icons/momo.png" alt="momo"></a>
+                            <a href="#"><img src="./img/icons/zalopay_icon.png" alt="zalopay"></a>
+                            <a href="#"><img src="./img/icons/payoo.jpg" alt="payoo"></a>
+                        </div>
+                        <div class="row col-12 linePartner">
+                            <a href="https://www.cgv.vn/"><img src="./img/icons/VCB.png" alt="vcb"></a>
+                            <a href="#"><img src="./img/icons/AGRIBANK.png" alt="agri"></a>
+                            <a href="#"><img src="./img/icons/VIETTINBANK.png" alt="VIETTINBANK"></a>
+                            <a href="#"><img src="./img/icons/IVB.png" alt="IVB"></a>
+                            <a href="#"><img src="./img/icons/123go.png" alt="123"></a>
+                        </div>
+                        <div class="row col-12 linePartner">
+                            <a href="#"><img src="./img/icons/laban.png" alt="laban"></a>
+                        </div>
+                    </div>
+                    <div class="row bot__items bot__right">
+                        <div class="col-xs-6 textCenter hideOnMobile">
+                            <p class="title">MOBILE APP</p>
+                            <a href="#"><img src="./img/icons/apple-logo.png" alt="apple"></a>
+                            <a href="#"><img src="./img/icons/android-logo.png" alt="android"></a>
+                        </div>
+                        <div class="col-xs-6 textCenter">
+                            <p class="title hideOnMobile">SOCIAL</p>
+                            <a href="#"><img src="./img/icons/facebook-logo.png" alt="facebook"></a>
+                            <a href="#"><img src="./img/icons/zalo-logo.png" alt="zalo-logo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="hrFooter">
+            <div class="footer__brand row">
+                <div class="imgFooter brand__items">
+                    <img src="./img/icons/zion-logo.jpg" alt="zion">
+                </div>
+                <div class="infoFooter brand__items">
+                    <span>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</span><br>
+                    <span>Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt Nam</span><br>
+                    <span>Mã số thuế: 0101659783</span>
+                </div>
+                <div class="imgFooter2 brand__items">
+                    <img src="./img/icons/9693e0dbb6ceb3b274afeb6aa09a911f.png" alt="bo cong thuong">
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- owncarousel  -->
+    <script src="./js/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            // margin: 10,
+            // autoplay: true,
+            // autoplayTimeout: 4000,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        })
+    </script>
+
+    <!-- wow  -->
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- swiper carousel  -->
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            }
+        });
+    </script>
+    <script>
+        var swiper = new Swiper('.swiperSlide', {
+            loop: true,
+            autoplay: {
+                delay: 2000
+            }
+        });
+    </script>
+</body>
+
+</html>

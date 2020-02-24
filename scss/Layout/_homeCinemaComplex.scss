@@ -1,0 +1,315 @@
+.homeCinemaComplex{
+    width: 100%;
+    margin: 0 auto;
+    @include mediaQuery('small'){
+        display: none;
+    }
+    img{
+        height: 120px;
+        width: 100%;
+    }
+    .homeCinema{
+        width: 70%;
+        margin: 0 auto;
+        .homeCinemaTop{
+            justify-content: center;
+            border-bottom: none;
+            margin-bottom: 40px;
+            a{
+                border: none;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    background-color: #e4e2e2;
+                    content: '';
+                    top: 15%;
+                    right: 0;
+                    width: 1px;
+                    height: 70%;
+                }
+                img{
+                    width: 50px;
+                    height: 50px;
+                    margin: 0 10px;
+                   
+                }
+            }
+        }
+        .homeCinemaPosition{
+            .cinema__position__control{
+                width: 30%;
+                height: 500px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                .nav-link{
+                    padding: 0;
+                    &.active{
+                        background-color: transparent;
+                    }
+                }
+                .cinemaLeft{
+                    padding: 5px;
+                    height: 90px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    border-bottom: 1px solid rgba(238,238,238,.88);
+                    &.row{
+                        margin-right: 0;
+                        margin-left: 0;
+                    }
+                    .cinemaLeftLeft{
+                        width: 20%;
+                        img{
+                            margin: 12px 5px;
+                            width: 50px;
+                            height: 50px;
+
+                        }
+                    }
+                    .cinemaLeftRight{
+                        width: 80%;
+                        padding: 6px 10px;
+                        span:nth-child(1){
+                            @include textStyle(14px, $fw-0, $color-black);
+                        }
+                        .address{
+                            text-overflow: ellipsis;
+                            overflow-x: hidden;
+                            margin-bottom: 0;
+                            @include textStyle(12px, $fw-0, $color-gray-3);
+                        }
+                        a{
+                            text-decoration: none;
+                            @include textStyle(12px, $fw-0, $color-red);
+                        }
+                    }
+                }
+            }
+            .cinema__position__content{
+                width: 70%;
+                padding: 0 5px;
+                height: 500px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                .row{
+                    margin-right: 0;
+                    margin-left: 0;
+                }
+                .tab-pane{
+                    border-bottom: 1px solid rgba(238,238,238,.88);
+                }
+                .cinemaRight{
+                    cursor: pointer;
+                    padding: 5px;
+                    height: 90px;
+                    overflow: hidden;
+                    position: relative;
+                    
+                    .cinemaRightLeft{
+                        width: 15%;
+                        img{
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                    .cinemaRightRight{
+                        width: 85%;
+                    }
+                }
+            }
+        }
+    }
+
+//    .homeCinemaContent{
+//        width: 70%;
+//        margin: 0 auto;
+//        .cinemaBorder{
+//         border: 1px solid #e4e2e2;
+//         width: 100%;
+//         overflow: hidden;
+//         height: 640px;
+//         }
+//        @include mediaQuery('large'){
+//            width: 90%;
+//         }
+//        .cinemaContent{
+//            width: 10%;
+//            border-right: 1px solid #e4e2e2;
+//            @include mediaQuery('small'){
+//             margin-right: 50%;
+            
+            
+//          }
+//            a{
+//                 padding: 20px 0;
+//                 position: relative;
+//                 height: 90px;
+//                 &::before{
+//                     position: absolute;
+//                     background-color: #e4e2e2;
+//                     content: '';
+//                     left: 15%;
+//                     bottom: 0;
+//                     width: 70%;
+//                     height: 1px;
+//                 }
+//                &:hover{
+//                    img{
+//                        opacity: 1;
+//                    }
+//                }
+//                img{
+//                    width: 50px;
+//                    height: 50px;
+//                    margin: 0 auto;
+//                    margin-left: 25px;
+//                    opacity: 0.5;
+//                }
+//            }
+//            .nav-link.active{
+//                background-color: transparent;
+//                img{
+//                    opacity: 1;
+//                }
+//            }
+//        }
+//        .cinemaContent2{
+//             width: 90%;
+//             // border: 1px solid #e4e2e2;
+
+            
+//             @include mediaQuery('small'){
+//                 padding-left: 40px;
+//                 width: 90%;
+                
+//              }
+
+//             .cinemaContentChild{
+//                 height: 100%;
+//                 .cinema{
+//                     border-right: 1px solid #e4e2e2;
+//                     height: 100%;
+//                     .active{
+//                         background-color: transparent;
+//                         padding: 0;
+//                         .cinemaMid{
+//                             opacity: 1;
+//                         }
+//                     }
+//                     .nav-link{
+//                         padding: 0;
+//                     }
+//                     .cinemaMid{
+//                         height: 90px;
+//                         position: relative;
+//                         cursor: pointer;
+//                         opacity: 0.5;
+//                         &:hover{
+//                             opacity: 1;
+//                             transition: all .3s;
+//                         }
+//                         &::before{
+//                             position: absolute;
+//                             background-color: #e4e2e2;
+//                             content: '';
+//                             left: 15%;
+//                             bottom: 0;
+//                             width: 70%;
+//                             height: 1px;
+//                         }
+//                         .cinemaMidLeft{
+//                             width: 25%;
+//                             img{
+//                                 width: 50px;
+//                                 height: 50px;
+//                                 margin: 20% 20% 0 30%;
+//                             }
+//                         }
+//                         .cinemaMidRight{
+//                             width: 75%;
+//                             color: black;
+//                             height: 100%;
+//                             padding: 3% 0;
+//                             span:nth-child(1){
+//                                 @include textStyle(14px, $fw-0, $color-black);
+//                             }
+//                             span:nth-child(3){
+//                                 @include textStyle(12px, $fw-0, $color-gray-3);
+//                             }
+//                             a{
+//                                 @include textStyle(12px, $fw-0, $color-red);
+//                             }
+//                             .addressDisplay{
+//                                 display: none;
+//                                 @include mediaQuery('medium'){
+//                                     display: block;
+//                                 }
+//                             }
+//                         }
+//                     }
+
+//                 }
+//                 .col-3{
+//                     height: 600px;
+//                 }
+//                 .cinemaRight{
+//                     height: 90px;
+//                     cursor: pointer;
+//                     .cinemaRightLeft{
+//                         width: 15%;
+//                         img{
+//                             width: 50px;
+//                             height: 50px;
+//                             margin: 22% 20% 0 10%;
+//                         }
+//                     }
+//                     .cinemaRightRight{
+//                         width: 85%;
+//                         padding: 3% 0;
+//                         span:nth-child(1){
+//                             @include textStyle(14px, $fw-3, $color-black);
+//                         }
+//                         .ageSpan{
+//                             padding: 3px 12px;
+//                             border-radius: 4px;
+//                             margin-right: 5px;
+//                             font-size: 14px;
+//                             min-width: 33px;
+//                             text-align: center;
+//                             color: white;
+//                             background-color: #00ac4d;
+//                         }
+//                         span:nth-child(3){
+//                             @include textStyle(12px, $fw-0, $color-gray-3);
+//                         }
+//                     }
+//                 }
+//                 .tab-content{
+//                     .showTime{
+//                         margin-left: -10px;
+//                         .typeFilm{
+//                             margin-bottom: 15px;
+//                             @include textStyle($fs-1, $fw-3, $color-black);
+//                         }
+//                         .time{
+//                             a{
+//                                 text-decoration: none;
+//                                 padding: 9px 14px;
+//                                 line-height: 20px;
+//                                 @include textStyle($fs-0, $fw-0, $color-gray-3);
+//                                 border: 1px solid #e4e2e2;
+//                                 border-radius: 7px;
+//                                 span{
+//                                     @include textStyle($fs-1 + 2, $fw-0, #108f3e);
+//                                     &:hover{
+//                                         color: $color-red;
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//        }
+//    }
+}

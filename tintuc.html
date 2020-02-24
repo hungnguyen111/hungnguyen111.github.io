@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light navHeader">
+            <img class="logo" src="./img/icons/web-logo.png" alt="logo">
+            <a href="#" class="navButton" data-toggle="collapse" data-target="#idnavMobile"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><img
+                    src="./img/icons/menu-options.png" alt="menu"></a>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="row mr-auto">
+                    <li><a href="#selectFilm">Lịch Chiếu</a></li>
+                    <li><a href="#homeCinemaComplex">Cụm rạp</a></li>
+                    <li><a href="#homeNews">Tin Tức</a></li>
+                    <li><a href="#homeApp">Ứng dụng</a></li>
+                </ul>
+                <div class="row navRight">
+                    <a href="#" class="avatar"><img src="./img/avatar.png" alt="avatar"> Đăng Nhập</a>
+                    <div class="selectLocation dropdown row">
+                        <i class="fa fa-map-marker-alt"></i>
+                        <div class="dropdown-toggle white locationCity" data-toggle="dropdown" aria-expanded="false">Hồ
+                            Chí Minh</div>
+                        <ul class="dropdown-menu selectScroll">
+                            <!-- ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hồ Chí Minh" class="ng-binding">Hồ Chí
+                                    Minh</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hà Nội" class="ng-binding">Hà Nội</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Đà Nẵng" class="ng-binding">Đà Nẵng</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hải Phòng" class="ng-binding">Hải
+                                    Phòng</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Biên Hoà" class="ng-binding">Biên
+                                    Hoà</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Nha Trang" class="ng-binding">Nha
+                                    Trang</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Bình Dương" class="ng-binding">Bình
+                                    Dương</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Phan Thiết" class="ng-binding">Phan
+                                    Thiết</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hạ Long" class="ng-binding">Hạ Long</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Cần Thơ" class="ng-binding">Cần Thơ</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Vũng Tàu" class="ng-binding">Vũng
+                                    Tàu</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Quy Nhơn" class="ng-binding">Quy
+                                    Nhơn</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Huế" class="ng-binding">Huế</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Long Xuyên" class="ng-binding">Long
+                                    Xuyên</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Thái Nguyên" class="ng-binding">Thái
+                                    Nguyên</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Buôn Ma Thuột" class="ng-binding">Buôn
+                                    Ma
+                                    Thuột</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Bắc Giang" class="ng-binding">Bắc
+                                    Giang</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Bến Tre" class="ng-binding">Bến Tre</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Việt Trì" class="ng-binding">Việt
+                                    Trì</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Ninh Bình" class="ng-binding">Ninh
+                                    Bình</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Thái Bình" class="ng-binding">Thái
+                                    Bình</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Vinh" class="ng-binding">Vinh</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Bảo Lộc" class="ng-binding">Bảo Lộc</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Đà Lạt" class="ng-binding">Đà Lạt</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Trà Vinh" class="ng-binding">Trà
+                                    Vinh</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Yên Bái" class="ng-binding">Yên Bái</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Kiên Giang" class="ng-binding">Kiên
+                                    Giang</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Vĩnh Long" class="ng-binding">Vĩnh
+                                    Long</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Cà Mau" class="ng-binding">Cà Mau</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hậu Giang" class="ng-binding">Hậu
+                                    Giang</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Tây Ninh" class="ng-binding">Tây
+                                    Ninh</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Tuyên Quang" class="ng-binding">Tuyên
+                                    Quang</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Thanh Hóa" class="ng-binding">Thanh
+                                    Hóa</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Nam Định" class="ng-binding">Nam
+                                    Định</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hải Dương" class="ng-binding">Hải
+                                    Dương</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Gia Lai" class="ng-binding">Gia Lai</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hà Tĩnh" class="ng-binding">Hà Tĩnh</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Phú Yên" class="ng-binding">Phú Yên</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Bạc Liêu" class="ng-binding">Bạc
+                                    Liêu</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Long An" class="ng-binding">Long An</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Đồng Hới" class="ng-binding">Đồng
+                                    Hới</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Hà Nam" class="ng-binding">Hà Nam</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Bắc Ninh" class="ng-binding">Bắc
+                                    Ninh</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Quảng Trị" class="ng-binding">Quảng
+                                    Trị</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Kon Tum" class="ng-binding">Kon Tum</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Sóc Trăng" class="ng-binding">Sóc
+                                    Trăng</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Sơn La" class="ng-binding">Sơn La</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Lạng Sơn" class="ng-binding">Lạng
+                                    Sơn</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Quảng Ngãi" class="ng-binding">Quảng
+                                    Ngãi</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Mỹ Tho" class="ng-binding">Mỹ Tho</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                            <li ng-repeat="location in listLocations" class="ng-scope">
+                                <a ng-click="selectLocation($index)" data-name="Đồng Tháp" class="ng-binding">Đồng
+                                    Tháp</a>
+                            </li><!-- end ngRepeat: location in listLocations -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+    <section class="content">
+        <p class="title">Tổng hợp nhân vật trong thương hiệu đình đám Star Wars (P1)</p>
+        <div class="row social">
+            <div class="like row">
+                <img src="./img/icons/comment.png" alt="comment">
+                <p>0 BÌNH LUẬN</p>
+            </div>
+            <div class="comment row">
+                <img src="./img/icons/comment.png" alt="comment">
+                <p>0 BÌNH LUẬN</p>
+            </div>
+            <div class="share row">
+                <img src="./img/icons/sharing-icon.png" alt="share">
+                <p>0 CHIA SẺ</p>
+            </div>
+        </div>
+        <div class="main__content">
+            
+                <p>Sau thành công vang dội tại Nhật Bản và nhiều nước trên thế giới,&nbsp;<strong><a href="https://tix.vn/phim/2249-one-piece-le-hoi-hai-tac">One Piece: Stampede</a></strong>&nbsp;(tựa Việt:&nbsp;<a href="https://tix.vn/phim/2249-one-piece-le-hoi-hai-tac"><strong>One Piece: Lễ Hội Hải Tặc</strong></a>) sẽ chính thức đổ bộ các cụm rạp tại Việt Nam vào đầu năm 2020.</p>
+
+                <p><strong><a href="https://tix.vn/phim/2249-one-piece-le-hoi-hai-tac">One Piece: Stampede</a></strong>&nbsp;là bộ phim điện ảnh thứ 14, đồng thời cũng là phim điện ảnh ra mắt nhân dịp kỷ niệm 20 năm tập anime đầu tiên của loạt phim lên sóng truyền hình, mang đến một trong những trận chiến hoành tráng nhất lịch sử của thế giới hải tặc và quy tụ đông đảo các nhân vật đình đám cùng tề tựu tại Lễ hội Hải tặc, hướng về một vũ đài và mục tiêu duy nhất: Tranh đoạt chiếc chìa khóa dẫn đến kho báu của Vua Hải Tặc Roger.</p>
+                
+                <p>Để giúp cho tất cả khán giả đều có cái nhìn tốt nhất, cùng điểm qua một vài điều quan trọng về thế giới trong One Piece&nbsp;và chuẩn bị ra rạp thưởng thức siêu phẩm gây bão này nào!</p>
+                
+                <p><strong>Nội dung chính của Stampede</strong></p>
+                
+                <p>Bộ manga huyền thoại&nbsp;One Piece&nbsp;của tác giả Eiichiro Oda mở đầu với sự kiện Vua hải tặc Gol D. Roger bị xử tử. Ngay trước khi chết, Roger tiết lộ rằng kho báu của mình được cất giấu ngoài biển khơi, ai tìm được sẽ là chủ nhân của nó và trở thành Tân Vua hải tặc của thế giới. Và từ đây, những kẻ tham vọng và những anh tài có máu phiêu lưu đổ xô ra biển tìm kiếm kho báu vĩ đại mang tên One Piece này.</p>
+                
+                <p>Bộ truyện&nbsp;One Piece&nbsp;theo chân thiếu niên Monkey D. Luffy, luôn thần tượng hải tặc Shanks Tóc đỏ&nbsp;nên thành lập băng Mũ Rơm của riêng mình và giong buồm ra khơi tìm kiếm kho báu huyền thoại One Piece để trở thành Vua hải tặc. Đặc biệt, khi còn bé, Luffy đã vô tình ăn phải trái ác quỷ Gomu Gomu,&nbsp;biến cậu thành người cao su có khả năng co dãn.</p>
+                
+                <p>Trên hành trình của mình,&nbsp;Luffy đã kết nạp thêm nhiều thành viên vào băng Mũ Rơm. Tổng số tính đến thời điểm hiện tại là 10, bao gồm Luffy, kiếm sĩ Roronoa Zoro, hoa tiêu Nami, xạ thủ Usopp, đầu bếp Sanji, bác sĩ Tony Tony Chopper, nhà khảo cổ Nico Robin, thợ đóng tàu Franky, nhạc công Brook và cựu Thất Vũ Hải - người cá Jinbei.</p>
+                
+                <p style="text-align:center"><img src="https://s3img.vcdn.vn/123phim/2019/12/d474fe34e0eb3fe17b2ebdecdb438673.jpg" style="width:80%"></p>
+                
+                <p>Nội dung của phim điện ảnh&nbsp;<strong><a href="https://tix.vn/phim/2249-one-piece-le-hoi-hai-tac">One Piece: Stampede</a></strong>&nbsp;sẽ&nbsp;xoay quanh một lễ hội do “bậc thầy lễ hội” Buena Festa tổ chức trên đảo Delta, dành riêng cho các hải tặc. Đây là sự kiện quy tụ đông đảo cướp biển từ khắp thế giới, bao gồm cả những kẻ sừng sỏ,&nbsp;“biệt đội” khét tiếng Siêu tân tinh (Supernovas), Thất Vũ Hải, CP0,… Và tất nhiên, băng Mũ Rơm vô tình cũng là một trong những khách mời của Buena Festa. Một khi các băng hải tặc đã tề tựu đông đủ, hành trình săn lùng chiếc chìa khóa dẫn đến di sản của Vua Hải Tặc Roger chính thức bắt đầu.</p>
+                
+                <p><strong>Các nhân vật quan trọng</strong></p>
+                
+                <p>Bên cạnh những nhân vật chính là 9 thành viên băng Mũ Rơm (Jinbei sẽ không góp mặt), khán giả sẽ được gặp gỡ một loạt nhân vật cả mới lẫn cũ bao gồm:</p>
+                
+                <p style="text-align:center"><img src="https://s3img.vcdn.vn/123phim/2019/12/ac1cb703040dff28f2ecf32b67fa5f07.jpg" style="width:70%"></p>
+                
+                <p style="text-align:center"><em>11 hải tặc trong&nbsp;Siêu tân tinh (Supernovas).</em></p>
+                
+                <p style="text-align:center"><img src="https://s3img.vcdn.vn/123phim/2019/12/592b70c1a3c85576935d884c3aa46db6.jpg" style="width:80%"></p>
+                
+                <p style="text-align:center"><em>Thất Vũ Hải - Hề Buggy.</em></p>
+                
+                <p style="text-align:center"><img src="https://s3img.vcdn.vn/123phim/2019/12/5a8f40d9769132589917e4b97b6cef2c.jpg" style="width:70%"></p>
+                
+                <p style="text-align:center"><em>Thất Vũ Hải - Boa Hancock.</em></p>
+                
+                <p style="text-align:center"><img src="https://s3img.vcdn.vn/123phim/2019/12/dfab6b648e4f3311a141a6ee4a5fdbe0.jpg" style="width:80%"></p>
+                
+                <p style="text-align:center"><em>Phó tổng tư lệnh quân Cách Mạng, đồng thời cũng là anh em kết nghĩa của Luffy&nbsp;- Sabo.</em></p>
+                
+                <p style="text-align:center"><img src="https://s3img.vcdn.vn/123phim/2019/12/0b3e0ca6af428f642bf3bf27f4203085.png" style="width:80%"></p>
+                
+                <p style="text-align:center"><em>Cựu Thất Vũ Hải - Crocodile.</em></p>
+                
+                <p style="text-align:center"><img src="https://s3img.vcdn.vn/123phim/2019/12/121fa174e8fe8af2dd7b90c4e7f5f4c2.jpg" style="width:80%"></p>
+                
+                <p style="text-align:center"><em>Phó Đô đốc Hải quân - Thợ săn trắng Smoker.</em></p>
+                
+                <p style="text-align:center"><img src="https://s3img.vcdn.vn/123phim/2019/12/145258884c781818be85a0a2f96024ad.jpg" style="width:80%"></p>
+                
+                <p style="text-align:center"><em>Tổ chức tình báo CP0 - Rob Lucci.</em></p>
+                
+                <p style="text-align:center"><img src="https://s3img.vcdn.vn/123phim/2019/12/e6fe7fe59c6745ea7b5d9edd0415bb05.jpg" style="width:80%"></p>
+                
+                <p style="text-align:center"><em>“Hậu duệ của Quỷ” Douglas Bullet: Tù nhân trốn thoát khỏi tầng thứ 6 nhà tù&nbsp;Impel Down. Hắn ta&nbsp;từng là kẻ bại trận và là đồng đội của Gol D. Roger.</em></p>
+                
+                <p><strong>"Thuật ngữ” đặc biệt trong&nbsp;One Piece</strong></p>
+                
+                <p><strong>Haki:</strong></p>
+                
+                <p>Là&nbsp;một sức mạnh bí ẩn được tìm thấy trong tất cả các sinh vật sống trên thế giới, một khả năng cảm nhận năng lượng tinh thần và chế ngự kẻ thù. Nó không khác gì so với những giác quan bình thường.</p>
+                
+                <p>Phần lớn mọi người không nhận thấy hoặc không thể đánh thức Haki. Có hai loại Haki phổ biến cho tất cả mọi người - loại có thể đạt được sau khi trải qua huấn luyện: <strong>Haki Vũ trang</strong>, <strong>Haki Quan sát</strong>.&nbsp;Loại Haki thứ ba&nbsp;chỉ có một nhóm người được cho là “người được chọn” mới sở hữu nó: <strong>Haki Bá vương</strong>.</p>
+                
+                <p><strong>Trái ác quỷ:</strong>&nbsp;Là một loại trái cây trao cho người ăn một loại sức mạnh đặc biệt nào đó. Có ba loại: <strong>Zoan</strong>, <strong>Logia</strong> và <strong>Paramecia</strong>.</p>
+                
+                <p><strong>Hệ Zoan</strong> cho phép người sử dụng biến hình toàn phần hay bán phần thành một con thú nào đó và mang sức mạnh của loài vật ấy.&nbsp;<strong>Hệ Logia</strong> cho phép người dùng biến đổi cấu trúc cơ thể thành sức mạnh của thiên nhiên và toàn quyền điều khiển chúng.&nbsp;Còn tất cả những thứ gì không thuộc hai loại trên thuộc <strong>hệ Paramecia</strong>.&nbsp;Những người đã ăn trái ác quỷ không thể bơi, thậm chí bị ngâm vào nước biển cũng khiến họ bị giảm hoặc mất sức mạnh, vì đó được gọi là lời nguyền của biển giành cho sức mạnh đó.</p>
+                
+                <p>Sương sương một vài thông tin cơ bản này có lẽ là chưa đủ để tái hiện toàn bộ thế giới đồ sộ của One Piece mà thánh&nbsp;Oda đã tạo ra, nhưng chắc chắn sẽ giúp bất cứ ai cũng có thể thưởng thức&nbsp;<strong><a href="https://tix.vn/phim/2249-one-piece-le-hoi-hai-tac">One Piece: Stampede</a></strong>&nbsp;trọn vẹn.</p>
+                
+                <p>Phim sẽ khởi chiếu tại từ&nbsp;<strong>03.01.2020</strong>&nbsp;với các phiên bản lồng tiếng và phụ đề. Đặc biệt, <strong><a href="https://tix.vn/phim/2249-one-piece-le-hoi-hai-tac">One Piece: Stampede</a></strong>&nbsp;(tựa Việt:&nbsp;<a href="https://tix.vn/phim/2249-one-piece-le-hoi-hai-tac"><strong>One Piece: Lễ Hội Hải Tặc</strong></a>) sẽ có suất chiếu sớm ngày&nbsp;<strong>31.12.2019</strong>&nbsp;và <strong>01.01.2020</strong>.</p>
+                
+                <p style="text-align:right"><strong>TIX</strong></p>
+        </div>
+        <div class="fb-comments fbComment" data-href="http://127.0.0.1:5500/tintuc.html" data-width="650" data-numposts="5"></div>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=1663593973765107&autoLogAppEvents=1"></script>
+    </section>
+    <section class="homeNews">
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="dienAnh">
+                <div class="newsBot newsTop row">
+                    <div class="newsBotLeft newsBotItem newsTopImg">
+                        <img src="./img/icons/tong-hop-tat-ca-nhan-vat-trong-thuong-hieu-dinh-dam-star-wars-p1-15776842659094.jpg"
+                            alt="">
+                        <p class="newTitle">Tổng hợp nhân vật trong thương hiệu đình đám Star Wars (P1)</p>
+                        <p>Danh sách này sẽ giúp các bạn 'phổ cập' kiến thức Star Wars một cách nhanh nhất.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="newsBotMid newsBotItem newsTopImg">
+                        <img src="./img/icons/09adbe8e1eff4efa227c6e41bfd5b893.jpg" alt="">
+                        <p class="newTitle">Bạn đã sẵn sàng nắm tất tần tật kiến thức trong One Piece: Stampede?</p>
+                        <p>TIX sẽ giúp bạn trở thành "fan cứng" One Piece chỉ trong tíc tắc nhé.</p>
+                        <div class="social row">
+                            <img src="./img/icons/like.png" alt="like">
+                            <p>0</p>
+                            <img src="./img/icons/comment.png" alt="comment">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="newsBotRight newsBotItem newsTopImg">
+                        <div class="botRightItems">
+                            <img src="./img/icons/muon-hinh-van-trang-kieu-doc-than-trong-chong-cu-tinh-moi-15773512253745.jpg"
+                                alt="">
+                            <p>Muôn hình vạn trạng kiểu độc thân trong Chồng Cũ, Tình Mới</p>
+                        </div>
+                        <div class="botRightItems">
+                            <img src="./img/icons/rambo-hoi-ket-dam-mau-hoi-ket-xung-tam-thuong-hieu-hanh-dong-duoc-yeu-thich-hang-dau-hollywood-15772691049778.jpg"
+                                alt="">
+                            <p>Rambo: Hồi Kết Đẫm Máu - Hồi kết xứng tầm thương hiệu hành động được yêu thích hàng đầu
+                                Hollywood</p>
+                        </div>
+                        <div class="botRightItems">
+                            <img src="./img/icons/thong-bao-chao-don-rap-bhd-star-the-garden-ha-noi-tren-tix-15772726310715.jpg"
+                                alt="">
+                            <p>[Thông báo] Chào đón rạp BHD Star The Garden - Hà Nội trên TIX</p>
+                        </div>
+                        <div class="botRightItems">
+                            <img src="./img/icons/73eb26f02cf1f09fdca7f0ad2ff4d7b6.jpg" alt="">
+                            <p>Những vở nhạc kịch nổi tiếng chuyển thể thành công sang phiên bản điện ảnh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer__bot_bg">
+            <div class="footer__bot">
+                <div class="row ">
+                    <div class="bot__items bot__left">
+                        <p class="hideOnMobile">TIX</p>
+                        <div class="row">
+                            <div class="bot__left__top hideOnMobile">
+                                <a href="#">FAQ</a><br>
+                                <a href="#">Brand Guidelines</a>
+                            </div>
+                            <div class="bot__left__bot ">
+                                <a href="#">Thỏa thuận sử dụng</a>
+                                <a href="#">Quy chế hoạt động</a>
+                                <a href="#">Chính sách bảo mật</a>
+                                <a href="#">Quyền lợi thành viên</a>
+                                <a href="#">Brand Guidelines</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot__items bot__mid hideOnMobile">
+                        <p>ĐỐI TÁC</p>
+                        <div class="row col-12 linePartner">
+                            <a href="https://www.cgv.vn/"><img src="./img/icons/cgv.png" alt="cgv"></a>
+                            <a href="#"><img src="./img/icons/bhd.png" alt="bhd"></a>
+                            <a href="#"><img src="./img/icons/galaxycine.png" alt="galaxycine"></a>
+                            <a href="#"><img src="./img/icons/cinestar.png" alt="cinestar"></a>
+                            <a href="#"><img src="./img/icons/lotte.png" alt="lotte"></a>
+                        </div>
+                        <div class="row col-12 linePartner">
+                            <a href="https://www.cgv.vn/"><img src="./img/icons/megags.png" alt="megags"></a>
+                            <a href="#"><img src="./img/icons/bt.jpg" alt="bt"></a>
+                            <a href="#"><img src="./img/icons/dongdacinema.png" alt="dongdacinema"></a>
+                            <a href="#"><img src="./img/icons/TOUCH.png" alt="TOUCH"></a>
+                            <a href="#"><img src="./img/icons/cnx.jpg" alt="cnx"></a>
+                        </div>
+                        <div class="row col-12 linePartner">
+                            <a href="https://www.cgv.vn/"><img src="./img/icons/STARLIGHT.png" alt="STARLIGHT"></a>
+                            <a href="#"><img src="./img/icons/dcine.png" alt="dcine"></a>
+                            <a href="#"><img src="./img/icons/momo.png" alt="momo"></a>
+                            <a href="#"><img src="./img/icons/zalopay_icon.png" alt="zalopay"></a>
+                            <a href="#"><img src="./img/icons/payoo.jpg" alt="payoo"></a>
+                        </div>
+                        <div class="row col-12 linePartner">
+                            <a href="https://www.cgv.vn/"><img src="./img/icons/VCB.png" alt="vcb"></a>
+                            <a href="#"><img src="./img/icons/AGRIBANK.png" alt="agri"></a>
+                            <a href="#"><img src="./img/icons/VIETTINBANK.png" alt="VIETTINBANK"></a>
+                            <a href="#"><img src="./img/icons/IVB.png" alt="IVB"></a>
+                            <a href="#"><img src="./img/icons/123go.png" alt="123"></a>
+                        </div>
+                        <div class="row col-12 linePartner">
+                            <a href="#"><img src="./img/icons/laban.png" alt="laban"></a>
+                        </div>
+                    </div>
+                    <div class="row bot__items bot__right">
+                        <div class="col-xs-6 textCenter hideOnMobile">
+                            <p class="title">MOBILE APP</p>
+                            <a href="#"><img src="./img/icons/apple-logo.png" alt="apple"></a>
+                            <a href="#"><img src="./img/icons/android-logo.png" alt="android"></a>
+                        </div>
+                        <div class="col-xs-6 textCenter">
+                            <p class="title hideOnMobile">SOCIAL</p>
+                            <a href="#"><img src="./img/icons/facebook-logo.png" alt="facebook"></a>
+                            <a href="#"><img src="./img/icons/zalo-logo.png" alt="zalo-logo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="hrFooter">
+            <div class="footer__brand row">
+                <div class="imgFooter brand__items">
+                    <img src="./img/icons/zion-logo.jpg" alt="zion">
+                </div>
+                <div class="infoFooter brand__items">
+                    <span>TIX – SẢN PHẨM CỦA CÔNG TY CỔ PHẦN ZION</span><br>
+                    <span>Địa chỉ: Z06 Đường số 13, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh, Việt Nam</span><br>
+                    <span>Mã số thuế: 0101659783</span>
+                </div>
+                <div class="imgFooter2 brand__items">
+                    <img src="./img/icons/9693e0dbb6ceb3b274afeb6aa09a911f.png" alt="bo cong thuong">
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
